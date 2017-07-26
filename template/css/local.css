@@ -1,0 +1,244 @@
+.color-inverted {
+    color: rgba(255, 255, 255, 0.87);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 1rem;
+    line-height: 1.45;
+    margin-bottom: 1em;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.87);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../images/splashscreen.jpg');
+}
+
+#topPageBar.fixed-height {
+    height: 50px;
+}
+
+.topPageBar-container {
+    background-color: #263238;
+    height: 50px;
+    position: relative;
+    z-index: 99997;
+}
+
+#topPageBar {
+    z-index: 99998;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    background-color: #263238;
+}
+
+#topPageBar .toggle-button {
+    display: none;
+    font-size: 30px;
+    margin-top: 8px;
+    color: rgba(255, 255, 255, 0.5);
+    float: left;
+    width: 50px;
+    cursor: pointer;
+}
+
+#topPageBar .toggle-button:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#topPageBar .brand-name {
+    float: left;
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 50px;
+    font-weight: 400;
+}
+
+#topPageBar .nav-links {
+    z-index: 99999;
+    display: block;
+    position: relative;
+    transition: all 0.5s;
+}
+
+#topPageBar .nav-links a {
+    transition: all 0.15s;
+    float: left;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+#topPageBar .nav-links:not(.collapsed) {
+    float: right;
+    position: static;
+}
+
+#topPageBar .nav-links:not(.collapsed) a {
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 50px;
+    padding: 0 16px;
+}
+
+#topPageBar .nav-links:not(.collapsed) a:link {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#topPageBar .nav-links:not(.collapsed) a:visited {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#topPageBar .nav-links:not(.collapsed) a:active {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#topPageBar .nav-links:not(.collapsed) a:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#topPageBar .nav-links:not(.collapsed) a.active {
+    background-color: #1c282e;
+    color: #ffffff;
+}
+
+#topPageBar .nav-links.collapsed {
+    clear: both;
+    float: left;
+    position: fixed;
+    min-width: 200px;
+    left: -100%;
+    top: 50px;
+    background: #263238;
+}
+
+#topPageBar .nav-links.collapsed a:last-child {
+    border-bottom: 1px solid #374349;
+}
+
+#topPageBar .nav-links.collapsed a {
+    border-top: 1px solid #374349;
+    clear: both;
+    float: left;
+    display: block;
+    width: 100%;
+    line-height: 50px;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0 16px;
+}
+
+#topPageBar .nav-links.collapsed a:link {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#topPageBar .nav-links.collapsed a:visited {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#topPageBar .nav-links.collapsed a:active {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#topPageBar .nav-links.collapsed a:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#topPageBar .nav-links.collapsed a.active {
+    color: #ffffff;
+    background-color: #1c282e;
+}
+
+#contentMain {
+    float: left;
+    position: relative;
+}
+
+#contentMain .carousel-inner .item {
+    z-index: 11;
+    width: 100vw;
+    height: 100vh;
+    max-height: 1200px;
+    overflow: auto;
+}
+
+#contentMain .carousel-inner .item:not(.landing-page) {
+    background: #ffffff;
+}
+
+
+/* footer */
+
+footer {
+    background: #000a12;
+    margin-top: 3rem;
+    color: rgba(255, 255, 255, 0.87);
+    line-height: 4rem;
+}
+
+
+/* styles for image thumbs and big preview */
+
+.image-thumbs {
+    width: 25%;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.image-thumbs>img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    float: left;
+    cursor: pointer;
+}
+
+#imageBigSize {
+    display: none;
+    z-index: 100001;
+    max-width: 95vw;
+    max-height: 95vh;
+    position: relative;
+    border: solid 1px #ccc;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#imageBigSize.opacity {
+    opacity: 1;
+    filter: alpha(opacity=50);
+}
+
+#fullPageOverlay {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 100000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.demo {
+    background: lightblue;
+    padding: 16px;
+}
