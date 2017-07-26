@@ -5,4 +5,4 @@ This template uses Carousel component from Bootstrap framework as main structure
 
 This website template and example are distributed under MIT licence.
 
-This project uses third party components (Bootstrap, JQuery) so respect proper licences.
+This project uses third party components (Bootstrap, JQuery, Google Fonts, etc.) so respect proper licences.
